@@ -15,7 +15,6 @@ for i in range(filas):
     matriz.append(fila)
     
 import nltk
-import random
 
 from nltk.corpus import cess_esp
 
