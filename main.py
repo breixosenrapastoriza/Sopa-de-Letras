@@ -1,6 +1,7 @@
-print("BREIXO SENRA")
 
-import string,random
+
+import string
+import random
 
 filas = 10
 columnas = 10
@@ -13,9 +14,28 @@ for i in range(filas):
         #fila.append(".")        
     matriz.append(fila)
     
-    
-palabra = "breixo"
+import nltk
+import random
+
+from nltk.corpus import cess_esp
+
+palabras_espanol = cess_esp.words()
+palabras_espanol_filtradas = []
+
+for palabra in palabras_espanol:
+    if len(palabra) >= 4 & len(palabra) < filas:
+        palabras_espanol_filtradas.append(palabra)
+
+
+
+palabra = random.choice(palabras_espanol_filtradas)
 palabra = palabra.upper()
+    
+print(palabra)    
+print("SOPA DE LETRAS")
+print("--------------")
+
+#palabra = "breixo"
 
 opcion_posicion = random.randint(0, 3)
 opcion_reverse = random.randint(0, 1)
